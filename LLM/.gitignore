@@ -1,0 +1,22 @@
+.env
+.env.local
+secrets.json
+
+# Hugging Face or Local Models
+models/
+weights/
+*.bin
+*.pth
+*.onnx
+*.ckpt
+
+data/
+vector_db/
+chroma/
+faiss_index/
+*.csv
+*.jsonl
+
+venv/
+.venv/
+__pycache__/

@@ -1,8 +1,0 @@
-.env
-.env.local
-secrets.json
-
-
-venv/
-.venv/
-__pycache__/

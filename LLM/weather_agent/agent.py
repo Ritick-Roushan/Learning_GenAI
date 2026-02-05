@@ -14,6 +14,10 @@ client = OpenAI(
 )
 
 
+def run_command(cmd:str):
+    result = os.system(cmd)
+    return result
+
 
 def get_weather(city: str):
     try:
@@ -62,7 +66,8 @@ def get_weather(city: str):
 
 
 available_tools = {
-    "get_weather": get_weather
+    "get_weather": get_weather,
+    "run_command": run_command
 }    
 
 
@@ -87,6 +92,7 @@ SYSTEM_PROMPT = """
 
     Available Tools:
     - get_weather: Takes city name as an input string and returns the weather info about the city.
+    - run_command(cmd: str): Takes a system linux command as string and executes the command on user's system and returns the output from that command
 
     Example 1:
     Q: Hey, can you solve 2 + 3 * 5 / 10
